@@ -1,27 +1,38 @@
 import Image from "next/image";
 
-export default function Produto() {
+export default function Produto(props) {
   return (
     <div>
       <div className="card-group" style={{width:500}}>
         <div className="card">
-          <Image
-            src={"/assets/carroamarelo.png"}
+          <img
+            src={props.imagem}
             className="card-img-top"
             alt="..."
             width={920}
             height={618}
           />
           <div className="card-body">
-            <h5 className="card-title">Carro Hot Wheels Amarelo</h5>
+            <h5 className="card-title">{props.nome}</h5>
             <p className="card-text">
-            Adicione velocidade à sua coleção com este incrível carrinho de Hot Wheels.
-            Com design inspirado em carros de corrida e detalhes autênticos, este carrinho é perfeito para fãs de velocidade de todas as idades.
-            Adquira já e prepare-se para emocionantes corridas em sua pista Hot Wheels!
+            {props.descricao}
             </p>
+            <div className="d-flex justify-content-between align-items-center">
+              {
+                props.disponivel == false
+                  ? <span className="badge text-bg-secondary">Indisponível</span>
+                  : null
+              }
+              {
+                props.novidade == true
+                  ? <span className="badge text-bg-success">Novidade</span>
+                  : null
+              }
+             
+            </div>
             <p className="card-text">
               <small className="text-body-secondary">
-                Last updated 3 mins ago
+              {props.preco}
               </small>
             </p>
           </div>
