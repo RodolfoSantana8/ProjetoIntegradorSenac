@@ -9,8 +9,8 @@ export default function Produto(props) {
             src={props.imagem}
             className="card-img-top"
             alt="..."
-            width={920}
-            height={618}
+            width="100%"
+            height="auto"
           />
           <div className="card-body">
             <h5 className="card-title">{props.nome}</h5>
@@ -32,7 +32,7 @@ export default function Produto(props) {
             </div>
             <p className="card-text">
               <small className="text-body-secondary">
-              {props.preco}
+              R${props.preco},00
               </small>
             </p>
           </div>
