@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Cabecalho></Cabecalho>
+      <Cabecalho/>
       <div className="container-fluid mt-2">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {listaProduto.map((dado, index) => (

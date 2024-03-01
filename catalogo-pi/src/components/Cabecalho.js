@@ -32,16 +32,9 @@ export default function Cabecalho() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Menu
+                Cadastro
               </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Cadastro
-                  </a>
-                </li>
-                
-              </ul>
+              
             </li>            
           </ul>
           <form className="d-flex" role="search">
