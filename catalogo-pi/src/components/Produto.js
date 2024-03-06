@@ -28,13 +28,13 @@ export default function Produto(props) {
                   ? <span className="badge text-bg-success">Novidade</span>
                   : null
               }
-             
-            </div>
-            <p className="card-text">
-              <small className="text-body-secondary">
-              R${props.preco},00
-              </small>
+             <p className="card-text">
+              <h4 className="text-body-secondary">
+              {Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(props.preco)}
+              </h4>
             </p>
+            </div>
+            
           </div>
         </div>
       </div>
