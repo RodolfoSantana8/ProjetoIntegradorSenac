@@ -15,17 +15,31 @@ export default function cadastro() {
     novidade: false,
     disponivel: false,
   });
-  
+
   function converte() {
     dadosProduto.preco = dadosProduto.preco.replace(",", ".");
   }
-  
+
   function handleSalvar() {
     converte();
     //Enviaremos o post para a API
     axios
       .post("https://localhost:7087/api/Produto", dadosProduto)
-      .then((res) => console.log(res));
+      .then((res) => {
+        alert("Seu produto já foi cadastrado!.");
+        const inputs = document.querySelectorAll("input");
+
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+        const input = document.querySelectorAll("textarea");
+
+        input.forEach((input) => {
+          input.value = "";
+        });
+
+        console.log(res);
+      });
   }
 
   function handleChange(e) {

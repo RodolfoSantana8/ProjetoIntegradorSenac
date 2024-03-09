@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Produto(props) {
   return (
-    <div>
-      <div className="card-group" style={{width:500}}>
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div className="card-group h-100" style={{width:"100%"}}>
         <div className="card">
           <img
             src={props.imagem}
